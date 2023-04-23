@@ -7,6 +7,12 @@ sequelize.authenticate()
     console.log("Conexao realizada com sucesso!")
 }).catch(function(){
     console.log("erro")
+    sequelize.authenticate()
+    .then(function(){
+        console.log("Conexao realizada com sucesso!")
+    }).catch(function(){
+        console.log("erro")
+    })
 })
 
 module.exports = sequelize;

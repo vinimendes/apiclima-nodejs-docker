@@ -28,6 +28,7 @@ services:
       - clima_rede
     ports:
       - 4976:8080
+    # Inicializacao
     command: "nodemon -x 'node app.js || touch app.js'"
     
 

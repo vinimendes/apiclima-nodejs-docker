@@ -12,7 +12,6 @@ COPY models ./models
 # Pacotes necessarios para a aplicacao
 RUN npm install
 RUN npm install -g nodemon
-RUN npm install pm2 -g
 RUN npm install express sequelize pg pg-hstore node-fetch@2 nodemon
 
 # Definicao de usuario
@@ -21,6 +20,5 @@ RUN chown -R techstorm:techstorm ../app
 
 USER techstorm
 
-#CMD ["nodemon", "app.js"]
-#pm2 start app.js --watch
+# Inicializacao esta definida no arquivo docker-compose
 #CMD ["nodemon", "app.js"]
